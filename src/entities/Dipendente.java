@@ -3,14 +3,12 @@ package entities;
 public class Dipendente {
 
     static public double stipendioBase = 1000;
-    static private String matricola;
+    private static double importoOrarioStraord;
+    private static double stipendio;
+    private String matricola;
+    private Livello livello;
 
-    static private double stipendio;
-    static private double importoOrarioStraord;
-
-    static private Livello livello;
-
-    static private Dipartimento dipartimento;
+    private Dipartimento dipartimento;
 
 
 //    constructors
@@ -26,7 +24,7 @@ public class Dipendente {
 
     public Dipendente(String matric, double stipBase, double stip, double impOrar, Livello liv, Dipartimento dipart) {
         this.matricola = matric;
-        this.stipendioBase = stipBase;
+        stipendioBase = stipBase;
         this.stipendio = stip;
         this.importoOrarioStraord = impOrar;
         this.livello = liv;
