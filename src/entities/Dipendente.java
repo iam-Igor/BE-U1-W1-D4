@@ -3,8 +3,8 @@ package entities;
 public class Dipendente {
 
     static double stipendioBase = 1000;
-    private double importoOrarioStraord;
-    private double stipendio;
+    private static double importoOrarioStraord;
+    private static double stipendio;
     private String matricola;
     private Livello livello;
 
@@ -36,16 +36,16 @@ public class Dipendente {
         return (stipendio + (hours * importoOrarioStraord));
     }
 
-    public double setImportoOrario(double importo) {
-
-        return importoOrarioStraord = importo;
-
+    public static double calcolaPagaMensile(Dipendente user) {
+        return stipendio;
     }
 
 //    calcola stipendio
 
-    public double calcolaPagaMensile(Dipendente user) {
-        return stipendio;
+    public double setImportoOrario(double importo) {
+
+        return importoOrarioStraord = importo;
+
     }
 
     //    getter and setter
